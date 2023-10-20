@@ -7,7 +7,7 @@
     <div class="card">
         <button data-bs-toggle="modal" data-bs-target="#lab" class="btn btn-primary mx-3 my-3" style="float:left"><i class='bx bxs-plus-circle'></i> Tambah Lab</button>
                 @if ($message = Session::get('success'))
-                    <div class="alert alert-success alert-block mb-2">
+                    <div class="alert alert-success alert-block mb-2 mx-3 mx-3">
                         <p><i class='bx bx-check'></i><strong> Selamat! </strong>{{ $message }}</p>
                     </div>
                 @endif

@@ -12,7 +12,7 @@ class KomputerController extends Controller
      */
     public function index()
     {
-        //
+        return view('components.komputer.index');
     }
 
     /**

@@ -37,4 +37,4 @@ Route::post('/update-lab/{id}', [LabController::class, 'update'])->name('updatel
 Route::get('/delete-lab/{id}', [LabController::class, 'destroy'])->name('destroylab');
 
 //KOMPUTER
-// Router::get('/komputer', [KomputerController::class,'imdex'])->name('komputer');
+Router::get('/komputer', [KomputerController::class,'index'])->name('komputer');
