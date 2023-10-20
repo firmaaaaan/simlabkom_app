@@ -63,8 +63,10 @@ class LabController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Lab $lab)
+    public function destroy($id)
     {
-        //
+        $lab=Lab::find($id);
+        $lab->delete();
+        return redirect('lab');
     }
 }
