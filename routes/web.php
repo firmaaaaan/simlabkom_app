@@ -2,8 +2,10 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\KomputerController;
 use App\Http\Controllers\LabController;
 use App\Http\Controllers\UserController;
+use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -33,3 +35,6 @@ Route::get('/lab', [LabController::class, 'index'])->name('lab');
 Route::post('/store-lab', [LabController::class, 'store'])->name('storelab');
 Route::post('/update-lab/{id}', [LabController::class, 'update'])->name('updatelab');
 Route::get('/delete-lab/{id}', [LabController::class, 'destroy'])->name('destroylab');
+
+//KOMPUTER
+// Router::get('/komputer', [KomputerController::class,'imdex'])->name('komputer');
