@@ -32,3 +32,4 @@ Route::get('/delte-user/{id}', [UserController::class,'destroy'])->name('destroy
 Route::get('/lab', [LabController::class, 'index'])->name('lab');
 Route::post('/store-lab', [LabController::class, 'store'])->name('storelab');
 Route::post('/update-lab/{id}', [LabController::class, 'update'])->name('updatelab');
+Route::get('/delete-lab/{id}', [LabController::class, 'destroy'])->name('destroylab');

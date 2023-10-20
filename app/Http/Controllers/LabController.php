@@ -30,7 +30,7 @@ class LabController extends Controller
     public function store(Request $request)
     {
         Lab::create($request->all());
-        return redirect('lab');
+        return redirect('lab')->with('success','Data laboratorium berhasil disimpan');
     }
 
     /**
