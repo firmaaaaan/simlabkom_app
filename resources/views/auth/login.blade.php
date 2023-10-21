@@ -119,13 +119,13 @@
               <form id="formAuthentication" class="mb-3" action="{{ route('postlogin') }}" method="POST">
                 @csrf
                 <div class="mb-3">
-                  <label for="email" class="form-label">Email or Username</label>
+                  <label for="email" class="form-label">Email</label>
                   <input
                     type="text"
                     class="form-control"
                     id="email"
-                    name="email-username"
-                    placeholder="Enter your email or username"
+                    name="email"
+                    placeholder="Enter your email"
                     autofocus />
                 </div>
                 <div class="mb-3 form-password-toggle">

@@ -57,7 +57,7 @@ class LabController extends Controller
         $lab = Lab::findOrFail($id);
         $lab->update($request->all());
 
-        return back();
+        return back()->with('info','Data Laboratorium berhasil diupdate');
     }
 
     /**
@@ -67,6 +67,6 @@ class LabController extends Controller
     {
         $lab=Lab::find($id);
         $lab->delete();
-        return redirect('lab');
+        return redirect('lab')->with('info2','Data Laboratorium berhasil dihapus');
     }
 }

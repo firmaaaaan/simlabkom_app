@@ -83,12 +83,12 @@
             </a>
           </li>
           <li class="menu-item">
-            <a href="layouts-without-navbar.html" class="menu-link">
-              <div data-i18n="Without navbar">Without navbar</div>
+            <a href="{{ route('komputer') }}" class="menu-link">
+              <div data-i18n="Without navbar">Komputer</div>
             </a>
           </li>
           <li class="menu-item">
-            <a href="layouts-container.html" class="menu-link">
+            <a href="" class="menu-link">
               <div data-i18n="Container">Container</div>
             </a>
           </li>

@@ -13,6 +13,10 @@ return new class extends Migration
     {
         Schema::create('komputers', function (Blueprint $table) {
             $table->id();
+            $table->string('lab_id');
+            $table->string('no_pc')->unique();
+            $table->string('kelengkapan');
+            $table->text('spesifikasi');
             $table->timestamps();
         });
     }

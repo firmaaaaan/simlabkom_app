@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Lab;
 use App\Models\Komputer;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class KomputerController extends Controller
 {
@@ -12,7 +14,9 @@ class KomputerController extends Controller
      */
     public function index()
     {
-        return view('components.komputer.index');
+        $lab=Lab::all();
+        $komputer=Komputer::all();
+        return view('components.komputer.index', compact('komputer','lab'));
     }
 
     /**
@@ -28,7 +32,12 @@ class KomputerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            // Tambahkan aturan validasi untuk kolom Komputer lainnya
+            'lab_id' => 'required|exists:labs,id',
+        ]);
+        Komputer::create($request->all());
+        return redirect('komputer')->with('success','Data komputer berhasil disimpan');
     }
 
     /**
@@ -50,16 +59,21 @@ class KomputerController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Komputer $komputer)
+    public function update(Request $request, $id)
     {
-        //
+        $komputer = Komputer::findOrFail($id);
+        $komputer->update($request->all());
+
+        return back()->with('info','Data komputer berhasil diupdate');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Komputer $komputer)
+    public function destroy($id)
     {
-        //
+        $komputer=Komputer::find($id);
+        $komputer->delete();
+        return redirect('komputer')->with('info2','Data komputer berhasil dihapus');
     }
 }
