@@ -13,6 +13,6 @@ class Komputer extends Model
     protected $guarded =['id'];
 
     public function lab(){
-        return $this->belongsTo(Lab::class);
+        return $this->belongsTo(Lab::class,'lab_id','id');
     }
 }

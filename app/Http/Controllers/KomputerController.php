@@ -32,10 +32,6 @@ class KomputerController extends Controller
      */
     public function store(Request $request)
     {
-        $data = $request->validate([
-            // Tambahkan aturan validasi untuk kolom Komputer lainnya
-            'lab_id' => 'required|exists:labs,id',
-        ]);
         Komputer::create($request->all());
         return redirect('komputer')->with('success','Data komputer berhasil disimpan');
     }
