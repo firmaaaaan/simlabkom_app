@@ -88,8 +88,8 @@
             </a>
           </li>
           <li class="menu-item">
-            <a href="" class="menu-link">
-              <div data-i18n="Container">Container</div>
+            <a href="{{ route('penggunapc') }}" class="menu-link">
+              <div data-i18n="Container">Pengguna PC</div>
             </a>
           </li>
           <li class="menu-item">

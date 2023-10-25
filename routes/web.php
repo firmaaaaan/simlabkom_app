@@ -4,6 +4,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\KomputerController;
 use App\Http\Controllers\LabController;
+use App\Http\Controllers\PenggunapcController;
 use App\Http\Controllers\UserController;
 use Illuminate\Routing\Router;
 use Illuminate\Support\Facades\Route;
@@ -41,3 +42,9 @@ Route::get('/komputer', [KomputerController::class,'index'])->name('komputer');
 Route::post('/komputer', [KomputerController::class,'store'])->name('storekomputer');
 Route::post('/komputer/{id}', [KomputerController::class,'update'])->name('updatekomputer');
 Route::get('/komputer/{id}', [KomputerController::class,'destroy'])->name('destroykomputer');
+
+//PENGGUNA PC
+Route::get('/penggunapc',[PenggunapcController::class,'index'])->name('penggunapc');
+Route::post('/penggunapc',[PenggunapcController::class,'store'])->name('storepenggunapc');
+Route::post('/penggunapc/{id}',[PenggunapcController::class,'update'])->name('updatepenggunapc');
+Route::get('/penggunapc/{id}',[PenggunapcController::class,'destroy'])->name('destroypenggunapc');

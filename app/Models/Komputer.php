@@ -15,4 +15,8 @@ class Komputer extends Model
     public function lab(){
         return $this->belongsTo(Lab::class,'lab_id','id');
     }
+
+    public function penggunapc() {
+        return $this->hasMany(Penggunapc::class);
+    }
 }
