@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\JadwalController;
 use App\Http\Controllers\KomputerController;
 use App\Http\Controllers\LabController;
 use App\Http\Controllers\PenggunapcController;
@@ -48,3 +49,9 @@ Route::get('/penggunapc',[PenggunapcController::class,'index'])->name('penggunap
 Route::post('/penggunapc',[PenggunapcController::class,'store'])->name('storepenggunapc');
 Route::post('/penggunapc/{id}',[PenggunapcController::class,'update'])->name('updatepenggunapc');
 Route::get('/penggunapc/{id}',[PenggunapcController::class,'destroy'])->name('destroypenggunapc');
+
+//JADWAL
+Route::get('/jadwal',[JadwalController::class,'index'])->name('jadwal');
+Route::post('/jadwal',[JadwalController::class,'store'])->name('storejadwal');
+Route::post('/jadwal/{id}',[JadwalController::class,'update'])->name('updatejadwal');
+Route::get('/jadwal/{id}',[JadwalController::class,'destroy'])->name('destroyjadwal');
